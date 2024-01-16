@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+:root {
+  /*primary colors*/
+  --gradient1: hsl(249, 99%, 64%);
+  --gradient2: hsl(278, 94%, 30%);
+  --Red: hsl(0, 100%, 66%);
+  /* neutral colors */
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  /* overflow: hidden; */
+}
+img {
+  max-width: 100%;
+}
+.flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+}
+.flex-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.flex-col-al-fs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+/* .flex-al-fs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+} */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 5px -5px 10px var(--Light-grayish-violet),
+    -5px 5px 10px var(--Light-grayish-violet);
+}
+.card-box {
+  height: 35vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-image: url("../images/bg-main-mobile.png");
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 300px;
+  max-width: 400px;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  color: var(--White);
+  border-radius: 10px;
+}
+.card-front {
+  bottom: -20%;
+  left: 5%;
+  background-image: url("../images/bg-card-front.png");
+  justify-content: center;
+  padding: 25px;
+  z-index: 5;
+}
+.card-front .details {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.details .card-number {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.card-back {
+  position: absolute;
+  bottom: 15%;
+  right: 25px;
+  background-image: url("../images/bg-card-back.png");
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.card-back span {
+  margin-right: 25px;
+}
+
+.form {
+  height: 65vh;
+  width: 100%;
+}
+.form-container {
+  padding: 80px 30px 50px;
+  width: 100%;
+  gap: 10px;
+}
+.form-container .input-group {
+  width: 100%;
+}
+.form-container .input-group span {
+  color: var(--Very-dark-violet);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid var(--Dark-grayish-violet);
+  color: var(--Very-dark-violet);
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 1.125rem;
+  outline: none;
+}
+.input-group input::placeholder {
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--Dark-grayish-violet);
+}
+button.btn {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.card-expiry input {
+  max-width: 80px;
+}
+.expiry--cvv {
+  width: 100%;
+}
+/* error styles */
+.input-group span.error {
+  color: red;
+  font-weight: 500;
+  visibility: hidden;
+  text-transform: capitalize;
+}
+#error {
+  color: red;
+  font-weight: 500;
+  visibility: hidden;
+  text-transform: capitalize;
+}
+.complete-state {
+  height: 65vh;
+  width: 100%;
+  gap: 30px;
+  justify-content: center;
+  padding-inline: 30px;
+  display: none;
+}
+.complete-state-content {
+  gap: 20px;
+}
+.complete-state-content h2 {
+  font-weight: 500;
+  color: var(--Very-dark-violet);
+}
+.complete-state-content p {
+  color: var(--Dark-grayish-violet);
+}
